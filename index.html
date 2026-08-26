@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Dashboard — Library Management System</title>
+<link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+<header class="topbar">
+  <div class="topbar-inner">
+    <div class="brand"><span class="brand-mark">LMS</span> Reading Room</div>
+    <nav class="main-nav">
+      <a href="index.html" class="active">Dashboard</a>
+      <a href="books.html">Books</a>
+      <a href="members.html">Members</a>
+      <a href="borrow.html">Borrow &amp; Return</a>
+    </nav>
+  </div>
+</header>
+
+<main class="page">
+  <div class="page-head">
+    <div>
+      <h1>Dashboard</h1>
+      <p class="subtitle">A snapshot of the catalog, active loans, and outstanding fines.</p>
+    </div>
+  </div>
+
+  <div id="stat-grid" class="stat-grid">
+    <div class="stat-card"><div class="label">Loading…</div><div class="value">—</div></div>
+  </div>
+
+  <section class="panel">
+    <h2>Overdue Loans</h2>
+    <div class="table-wrap">
+      <table>
+        <thead>
+          <tr>
+            <th>Book</th>
+            <th>Member</th>
+            <th>Due Date</th>
+            <th>Status</th>
+            <th>Fine</th>
+          </tr>
+        </thead>
+        <tbody id="overdue-body">
+          <tr><td colspan="5">Loading overdue loans…</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </section>
+</main>
+
+<footer class="site-footer">Library Management System — books, members, loans, and fines in one place.</footer>
+
+<script type="module" src="js/dashboard.js"></script>
+</body>
+</html>
